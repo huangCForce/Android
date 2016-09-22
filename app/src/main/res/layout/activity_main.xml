@@ -23,4 +23,12 @@
         android:text="new"
         android:layout_below="@+id/tx_title"
         android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_below="@id/btn_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@null"/>
 </RelativeLayout>

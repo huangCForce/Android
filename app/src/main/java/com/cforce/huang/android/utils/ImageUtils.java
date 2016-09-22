@@ -26,6 +26,9 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -43,6 +46,16 @@ import java.io.OutputStream;
  * Created by huang on 2016/9/22.
  */
 public class ImageUtils {
+
+    /**
+     * 加载图片 Picasso
+     * @param context 上下文
+     * @param url       图片链接
+     * @param imageView 图片控件
+     */
+    public static void loadImg(Context context, String url, ImageView imageView){
+        Picasso.with(context).load(url).into(imageView);
+    }
 
     /**
      * bitmap转byteArr
