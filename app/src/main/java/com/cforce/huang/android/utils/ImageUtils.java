@@ -28,7 +28,7 @@ import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -54,7 +54,7 @@ public class ImageUtils {
      * @param imageView 图片控件
      */
     public static void loadImg(Context context, String url, ImageView imageView){
-        Picasso.with(context).load(url).into(imageView);
+        Glide.with(context).load(url).into(imageView);
     }
 
     /**

@@ -36,6 +36,6 @@ public class MainActivity extends BaseActivity {
     public void btnNew() {
         Toast.makeText(this, "Hello world", Toast.LENGTH_SHORT).show();
         Logger.i("btnNew Onclick");
-        ImageUtils.loadImg(this, "http://imgsrc.baidu.com/forum/pic/item/91ef76c6a7efce1b4b724a5eaf51f3deb58f65cd.jpg", imgHead);
+        ImageUtils.loadImg(this, "http://b.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=726677f8530fd9f9a0425d6d101df81c/f703738da97739122a85dde5fa198618377ae297.jpg", imgHead);
     }
 }

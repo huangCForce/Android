@@ -7,5 +7,9 @@
 ### Logger 日志处理框架
 [logger](https://github.com/orhanobut/logger)
 
-### picasso 图片显示框架
-[gitHub](https://github.com/square/picasso)
+### glide 图片显示框架
+[gitHub](https://github.com/bumptech/glide)
+
+### 备注
+Retrofit
+RxJava
