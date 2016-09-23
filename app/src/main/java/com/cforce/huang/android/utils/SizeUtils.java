@@ -7,10 +7,14 @@ import android.util.TypedValue;
 import android.view.View;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class SizeUtils {
+
+    private SizeUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * dp转px

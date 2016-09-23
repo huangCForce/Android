@@ -19,10 +19,14 @@ import java.util.zip.ZipOutputStream;
 import static com.cforce.huang.android.utils.ConstUtils.KB;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class ZipUtils {
+
+    private ZipUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * 批量压缩文件

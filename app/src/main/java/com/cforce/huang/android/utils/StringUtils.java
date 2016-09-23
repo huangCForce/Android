@@ -3,9 +3,15 @@ package com.cforce.huang.android.utils;
 import java.io.UnsupportedEncodingException;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
 public class StringUtils {
+
+    private StringUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * 判断字符串是否为null或长度为0
      *

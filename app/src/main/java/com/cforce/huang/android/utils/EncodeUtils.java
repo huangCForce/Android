@@ -13,6 +13,10 @@ import java.net.URLEncoder;
  */
 public class EncodeUtils {
 
+    private EncodeUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * URL编码
      * <p>若想自己指定字符集,可以使用{@link #urlEncode(String input, String charset)}方法</p>

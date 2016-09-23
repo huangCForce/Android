@@ -13,10 +13,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class ThreadPoolUtils {
+
+    private ThreadPoolUtils(){
+        throw new AssertionError();
+    }
 
     public enum Type {
         FixedThread,

@@ -47,6 +47,10 @@ import java.io.OutputStream;
  */
 public class ImageUtils {
 
+    private ImageUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * 加载图片 Picasso
      * @param context 上下文

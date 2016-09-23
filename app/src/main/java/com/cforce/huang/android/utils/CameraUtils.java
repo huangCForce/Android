@@ -18,6 +18,10 @@ import java.io.IOException;
 
 public class CameraUtils {
 
+    private CameraUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * 获取打开照程序界面的Intent
      */

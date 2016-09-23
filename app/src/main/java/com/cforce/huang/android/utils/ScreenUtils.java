@@ -16,10 +16,14 @@ import android.view.WindowManager.LayoutParams;
 import java.lang.reflect.Method;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class ScreenUtils {
+
+    private ScreenUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * 获取屏幕的宽度px

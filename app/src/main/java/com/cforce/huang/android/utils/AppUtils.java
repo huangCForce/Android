@@ -22,6 +22,10 @@ import java.util.List;
  */
 public class AppUtils {
 
+    private AppUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * 获取安装App(支持6.0)的意图
      *
@@ -291,9 +295,9 @@ public class AppUtils {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         @SuppressWarnings("deprecation")
         List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
-        if (!tasks.isEmpty()) {
+        if (tasks != null && !tasks.isEmpty()) {
             ComponentName topActivity = tasks.get(0).topActivity;
-            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+            if (topActivity != null && !topActivity.getPackageName().equals(context.getPackageName())) {
                 return true;
             }
         }

@@ -5,10 +5,14 @@ import java.util.regex.Pattern;
 import static com.cforce.huang.android.utils.ConstUtils.*;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class RegexUtils {
+
+    private RegexUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * If u want more please visit http://toutiao.com/i6231678548520731137/

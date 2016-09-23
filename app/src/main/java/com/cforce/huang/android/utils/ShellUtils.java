@@ -7,15 +7,19 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class ShellUtils {
 
     public static final String COMMAND_SU = "su";
     public static final String COMMAND_SH = "sh";
     public static final String COMMAND_EXIT = "exit\n";
     public static final String COMMAND_LINE_END = "\n";
+
+    private ShellUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * 判断设备是否root
@@ -90,7 +94,7 @@ public class ShellUtils {
      * @param isNeedResultMsg 是否需要结果消息
      * @return CommandResult
      */
-    public static CommandResult execCmd(String[] commands, boolean isRoot, boolean isNeedResultMsg) {
+    private static CommandResult execCmd(String[] commands, boolean isRoot, boolean isNeedResultMsg) {
         int result = -1;
         if (commands == null || commands.length == 0) {
             return new CommandResult(result, null, null);

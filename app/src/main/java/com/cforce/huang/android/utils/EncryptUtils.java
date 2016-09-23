@@ -21,6 +21,10 @@ import static com.cforce.huang.android.utils.ConvertUtils.hexString2Bytes;
  */
 public class EncryptUtils {
 
+    private EncryptUtils(){
+        throw new AssertionError();
+    }
+
     /*********************** 哈希加密相关 ***********************/
     /**
      * MD2加密

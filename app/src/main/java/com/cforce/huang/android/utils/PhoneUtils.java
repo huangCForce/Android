@@ -20,10 +20,14 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class PhoneUtils {
+
+    private PhoneUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * 判断设备是否是手机

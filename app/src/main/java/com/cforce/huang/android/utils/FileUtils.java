@@ -19,13 +19,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.cforce.huang.android.utils.ConstUtils.*;
+import static com.cforce.huang.android.utils.ConstUtils.KB;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class FileUtils {
+
+    private FileUtils(){
+        throw new AssertionError();
+    }
+
     /**
      * 根据文件路径获取文件
      *

@@ -8,10 +8,14 @@ import java.util.Locale;
 import static com.cforce.huang.android.utils.ConstUtils.*;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class TimeUtils {
+
+    private TimeUtils(){
+        throw new AssertionError();
+    }
 
     /**
      * <p>在工具类中经常使用到工具类的格式化描述，这个主要是一个日期的操作类，所以日志格式主要使用 SimpleDateFormat的定义格式.</p>
