@@ -42,7 +42,7 @@ public class EncryptUtils {
      * @param data 明文字节数组
      * @return 16进制密文
      */
-    public static String encryptMD2ToString(byte[] data) {
+    private static String encryptMD2ToString(byte[] data) {
         return bytes2HexString(encryptMD2(data));
     }
 

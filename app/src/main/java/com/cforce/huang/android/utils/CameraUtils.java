@@ -13,9 +13,9 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class CameraUtils {
 
     private CameraUtils(){

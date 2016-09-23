@@ -1,9 +1,9 @@
 package com.cforce.huang.android.utils;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
-
 public class ConstUtils {
 
     /******************** 存储相关常量 ********************/

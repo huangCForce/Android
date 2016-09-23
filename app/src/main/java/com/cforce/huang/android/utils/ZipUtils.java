@@ -77,7 +77,7 @@ public class ZipUtils {
      * @return {@code true}: 压缩成功<br>{@code false}: 压缩失败
      * @throws IOException IO错误时抛出
      */
-    public static boolean zipFiles(Collection<File> resFiles, File zipFile, String comment)
+    private static boolean zipFiles(Collection<File> resFiles, File zipFile, String comment)
             throws IOException {
         if (resFiles == null || zipFile == null) return false;
         ZipOutputStream zos = null;
@@ -286,7 +286,7 @@ public class ZipUtils {
      * @return 返回带有关键字的文件链表
      * @throws IOException IO错误时抛出
      */
-    public static List<File> unzipFileByKeyword(File zipFile, File destDir, String keyword)
+    private static List<File> unzipFileByKeyword(File zipFile, File destDir, String keyword)
             throws IOException {
         if (zipFile == null || destDir == null) return null;
         List<File> files = new ArrayList<>();

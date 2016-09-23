@@ -43,6 +43,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
+ *
  * Created by huang on 2016/9/22.
  */
 public class ImageUtils {
@@ -52,7 +53,7 @@ public class ImageUtils {
     }
 
     /**
-     * 加载图片 Picasso
+     * 加载图片 Glide
      * @param context 上下文
      * @param url       图片链接
      * @param imageView 图片控件
