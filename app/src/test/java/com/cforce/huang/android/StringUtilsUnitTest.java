@@ -7,7 +7,7 @@ import org.junit.Test;
 
 
 /**
- * 
+ *
  * Created by huang on 2016/9/23.
  */
 public class StringUtilsUnitTest {
