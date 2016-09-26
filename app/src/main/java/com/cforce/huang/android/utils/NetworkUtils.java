@@ -42,7 +42,7 @@ public class NetworkUtils {
     }
 
     /**
-     * 获取活动网络信息
+     * 获取当前网络信息
      *
      * @param context 上下文
      * @return NetworkInfo
@@ -150,7 +150,7 @@ public class NetworkUtils {
      * <li>{@link #NETWORK_NO     } = -1;</li>
      * </ul>
      */
-    public static int getNetWorkType(Context context) {
+    private static int getNetWorkType(Context context) {
         int netType = NETWORK_NO;
         NetworkInfo info = getActiveNetworkInfo(context);
         if (info != null && info.isAvailable()) {
