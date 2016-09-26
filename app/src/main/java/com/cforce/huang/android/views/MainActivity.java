@@ -1,5 +1,6 @@
 package com.cforce.huang.android.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,17 +26,24 @@ public class MainActivity extends BaseActivity {
     ImageView imgHead;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected int getContentViewLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Logger.d("MainActivity");
+        ImageUtils.loadImg(this, "http://b.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=726677f8530fd9f9a0425d6d101df81c/f703738da97739122a85dde5fa198618377ae297.jpg", imgHead);
+
     }
 
     @OnClick(R.id.btn_new)
     public void btnNew() {
         Toast.makeText(this, "Hello world", Toast.LENGTH_SHORT).show();
         Logger.i("btnNew Onclick");
-        ImageUtils.loadImg(this, "http://b.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=726677f8530fd9f9a0425d6d101df81c/f703738da97739122a85dde5fa198618377ae297.jpg", imgHead);
+        Intent it = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(it);
     }
 }

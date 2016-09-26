@@ -6,7 +6,9 @@ import com.cforce.huang.android.utils.TimeUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -60,5 +62,18 @@ public class TimeUtilsUnitTest {
         Assert.assertTrue(TimeUtils.isLeapYear(2016));
         TimeUtils.milliseconds2Date(TimeUtils.getCurTimeMills());
         TimeUtils.date2Milliseconds(new Date());
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        Date date = null;
+        try {
+            date = formatter.parse("2016-01-02");
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            System.out.println("Week number: " + calendar.get(Calendar.WEEK_OF_YEAR));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
