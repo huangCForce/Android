@@ -10,8 +10,8 @@
 
         <TextView
             android:id="@+id/tv_msg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:text="左边原图，右边显示处理后的图片" />
 
         <RelativeLayout
@@ -44,19 +44,20 @@
 
             <Button
                 android:id="@+id/btn_org"
-                android:layout_width="60dp"
+                android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:background="#ffff11"
                 android:text="原图" />
 
             <Button
-                android:id="@+id/btn_rotate"
+                android:id="@+id/btn_rounded_corner"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:background="#aaaaaaaa"
-                android:text="旋转" />
+                android:text="圆角" />
+
 
             <Button
                 android:id="@+id/btn_scale1"
@@ -64,19 +65,19 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:background="#aaaaaaaa"
-                android:text="缩放1" />
+                android:text="缩放int" />
 
             <Button
                 android:id="@+id/btn_scale2"
-                android:layout_width="60dp"
+                android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:background="#aaaaaaaa"
-                android:text="缩放2" />
+                android:text="缩放float" />
 
             <Button
                 android:id="@+id/btn_skew"
-                android:layout_width="60dp"
+                android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
                 android:background="#aaaaaaaa"
@@ -136,11 +137,11 @@
             android:padding="5dp">
 
             <Button
-                android:id="@+id/btn_rounded_corner"
-                android:layout_width="60dp"
+                android:id="@+id/btn_rotate"
+                android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:background="#aaaaaaaa"
-                android:text="圆角" />
+                android:text="旋转" />
 
             <Button
                 android:id="@+id/btn_overlay"
@@ -240,7 +241,7 @@
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="5dp"
-                android:background="#ffff11"
+                android:background="#aaaaaaaa"
                 android:text="调色" />
         </LinearLayout>
 

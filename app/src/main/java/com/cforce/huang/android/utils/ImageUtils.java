@@ -46,6 +46,7 @@ import java.io.OutputStream;
  *
  * Created by huang on 2016/9/22.
  */
+@Deprecated
 public class ImageUtils {
 
     private ImageUtils(){

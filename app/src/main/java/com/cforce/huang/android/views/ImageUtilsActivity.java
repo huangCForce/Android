@@ -1,5 +1,7 @@
 package com.cforce.huang.android.views;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cforce.huang.android.R;
+import com.cforce.huang.android.utils.ImageKit;
+
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -16,6 +21,10 @@ import butterknife.OnClick;
  * Created by huang on 2016/9/27.
  */
 public class ImageUtilsActivity extends BaseActivity {
+
+    private Bitmap bitmap;
+    private String orgBitmapInfo;
+    private int degree;// 旋转角度
 
     @BindView(R.id.tv_msg)
     TextView tvMsg;
@@ -92,18 +101,39 @@ public class ImageUtilsActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.test);
+        orgBitmapInfo = "原图信息:" + ImageKit.getBitmapInfo(bitmap);
     }
 
     @OnClick({R.id.btn_org, R.id.btn_rotate, R.id.btn_scale1, R.id.btn_scale2, R.id.btn_skew, R.id.btn_clip, R.id.btn_compress, R.id.btn_translate, R.id.btn_reverse, R.id.btn_lian_huan_hua, R.id.btn_rounded_corner, R.id.btn_overlay, R.id.btn_get_bmp, R.id.btn_bing_dong, R.id.btn_rong_zhu, R.id.btn_jun_zhi_mo_hu, R.id.btn_fast_mo_hu, R.id.btn_gao_si_mo_hu, R.id.btn_miao_bian, R.id.btn_su_miao, R.id.btn_you_hua, R.id.btn_color, R.id.btn_rui_hua, R.id.btn_sui_ji_noise, R.id.btn_hei_bai, R.id.btn_yu_hua, R.id.btn_jiao_pian, R.id.btn_huai_jiu, R.id.btn_guang_zhao, R.id.btn_fu_diao})
     public void onClick(View view) {
+        String str = "";
+        long start = System.currentTimeMillis();
         switch (view.getId()) {
             case R.id.btn_org:
+                str += "原图";
+                bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.test);
                 break;
             case R.id.btn_rotate:
+                degree = (degree + 45) % 360;
+                bitmap = ImageKit.rotate(bitmap, degree);
+                str += "旋转";
                 break;
             case R.id.btn_scale1:
+                Random random = new Random();
+                int x = random.nextInt(500);
+                int y = random.nextInt(500);
+
+                bitmap = ImageKit.scale(BitmapFactory.decodeResource(getResources(), R.mipmap.test), x, y);
+                str += "缩放(指定缩放大小) x=" + x + " y=" + y + ",";
                 break;
             case R.id.btn_scale2:
+
+                random = new Random();
+                float sx = random.nextFloat() + random.nextFloat();
+                float sy = random.nextFloat() + random.nextFloat();
+                bitmap = ImageKit.scale(BitmapFactory.decodeResource(getResources(), R.mipmap.test), sx, sy);
+                str += "缩放(按比例) x缩放比例=" + sx + ",y缩放比例=" + sy + ",";
                 break;
             case R.id.btn_skew:
                 break;
@@ -118,6 +148,8 @@ public class ImageUtilsActivity extends BaseActivity {
             case R.id.btn_lian_huan_hua:
                 break;
             case R.id.btn_rounded_corner:
+                bitmap = ImageKit.toRound(bitmap);
+                str += "圆角";
                 break;
             case R.id.btn_overlay:
                 break;
@@ -158,5 +190,10 @@ public class ImageUtilsActivity extends BaseActivity {
             case R.id.btn_fu_diao:
                 break;
         }
+        long end = System.currentTimeMillis();
+        str = orgBitmapInfo + "\n" + str + " 处理时间(ms): " + (end - start) + " 处理后图片信息: " + ImageKit.getBitmapInfo(bitmap);
+
+        tvMsg.setText(str);
+        imgFilter.setImageBitmap(bitmap);
     }
 }
