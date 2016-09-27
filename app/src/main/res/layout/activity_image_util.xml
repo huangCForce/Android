@@ -1,0 +1,325 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左边原图，右边显示处理后的图片" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_org"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/test" />
+
+            <ImageView
+                android:id="@+id/img_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_org"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#ffff11"
+                android:text="原图" />
+
+            <Button
+                android:id="@+id/btn_rotate"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="旋转" />
+
+            <Button
+                android:id="@+id/btn_scale1"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="缩放1" />
+
+            <Button
+                android:id="@+id/btn_scale2"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="缩放2" />
+
+            <Button
+                android:id="@+id/btn_skew"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="倾斜 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_clip"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="裁剪" />
+
+            <Button
+                android:id="@+id/btn_compress"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="压缩" />
+
+            <Button
+                android:id="@+id/btn_translate"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="平移" />
+
+            <Button
+                android:id="@+id/btn_reverse"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="反转" />
+
+            <Button
+                android:id="@+id/btn_lian_huan_hua"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="连环画" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_rounded_corner"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="圆角" />
+
+            <Button
+                android:id="@+id/btn_overlay"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="叠加" />
+
+
+            <Button
+                android:id="@+id/btn_get_bmp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="读取大图" />
+
+            <Button
+                android:id="@+id/btn_bing_dong"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="冰冻" />
+
+            <Button
+                android:id="@+id/btn_rong_zhu"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="熔铸" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_jun_zhi_mo_hu"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="均值模糊" />
+
+            <Button
+                android:id="@+id/btn_fast_mo_hu"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="快速模糊" />
+
+            <Button
+                android:id="@+id/btn_gao_si_mo_hu"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="高斯模糊" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_miao_bian"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="描边" />
+
+            <Button
+                android:id="@+id/btn_su_miao"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="素描" />
+
+            <Button
+                android:id="@+id/btn_you_hua"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="油画" />
+
+            <Button
+                android:id="@+id/btn_color"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#ffff11"
+                android:text="调色" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_rui_hua"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="锐化" />
+
+            <Button
+                android:id="@+id/btn_sui_ji_noise"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="噪声" />
+
+            <Button
+                android:id="@+id/btn_hei_bai"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="黑白" />
+
+            <Button
+                android:id="@+id/btn_yu_hua"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="羽化" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_jiao_pian"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#aaaaaaaa"
+                android:text="胶片" />
+
+            <Button
+                android:id="@+id/btn_huai_jiu"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="怀旧" />
+
+            <Button
+                android:id="@+id/btn_guang_zhao"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="光照" />
+
+            <Button
+                android:id="@+id/btn_fu_diao"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="#aaaaaaaa"
+                android:text="浮雕" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
