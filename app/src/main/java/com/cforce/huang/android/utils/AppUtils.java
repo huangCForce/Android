@@ -27,20 +27,19 @@ public class AppUtils {
     }
 
     /**
-     * 获取安装App(支持6.0)的意图
+     * 获取安装App(支持6.0)的Intent
      *
      * @param filePath 文件路径
-     * @return 意图
+     * @return Intent
      */
     public static Intent getInstallAppIntent(String filePath) {
         return getInstallAppIntent(FileUtils.getFileByPath(filePath));
     }
 
     /**
-     * 获取安装App(支持6.0)的意图
-     *
+     * 获取安装App(支持6.0)
      * @param file 文件
-     * @return 意图
+     * @return Intent
      */
     public static Intent getInstallAppIntent(File file) {
         if (file == null) return null;
@@ -56,10 +55,9 @@ public class AppUtils {
     }
 
     /**
-     * 获取卸载App的意图
-     *
+     * 获取卸载App
      * @param packageName 包名
-     * @return 意图
+     * @return Intent
      */
     public Intent getUninstallAppIntent(String packageName) {
         Intent intent = new Intent(Intent.ACTION_DELETE);
@@ -68,21 +66,21 @@ public class AppUtils {
     }
 
     /**
-     * 获取打开App的意图
+     * 获取打开App的Intent
      *
      * @param context     上下文
      * @param packageName 包名
-     * @return 意图
+     * @return Intent
      */
     public static Intent getLaunchAppItent(Context context, String packageName) {
         return getIntentByPackageName(context, packageName);
     }
 
     /**
-     * 获取App信息的意图
+     * 获取App信息的Intent
      *
      * @param packageName 包名
-     * @return 意图
+     * @return Intent
      */
     public static Intent getAppInfoIntent(String packageName) {
         Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
@@ -90,10 +88,10 @@ public class AppUtils {
     }
 
     /**
-     * 获取App信息分享的意图
+     * 获取App信息分享的Intent
      *
      * @param info 分享信息
-     * @return 意图
+     * @return Intent
      */
     public static Intent getShareInfoIntent(String info) {
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -113,7 +111,7 @@ public class AppUtils {
     }
 
     /**
-     * 根据包名获取意图
+     * 根据包名获取Intent
      *
      * @param context     上下文
      * @param packageName 包名
