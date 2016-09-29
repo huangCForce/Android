@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.cforce.huang.android.R;
 
+import net.cforce.huang.common.utils.ImageKit;
+
 import java.util.Random;
 
 import butterknife.BindView;

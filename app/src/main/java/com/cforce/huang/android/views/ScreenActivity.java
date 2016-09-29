@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import com.cforce.huang.android.R;
 
+import net.cforce.huang.common.utils.ScreenUtils;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 

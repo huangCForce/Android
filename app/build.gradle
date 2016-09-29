@@ -30,10 +30,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.orhanobut:logger:1.15'
+
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     compile 'in.srain.cube:ultra-ptr:1.0.11'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'//ConverterFactory的Gson依赖包
+    compile project(path: ':library:common')
 }

@@ -8,6 +8,9 @@ import android.widget.Toast;
 import com.cforce.huang.android.R;
 import com.orhanobut.logger.Logger;
 
+import net.cforce.huang.common.utils.LogKit;
+import net.cforce.huang.common.utils.NetworkUtils;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -117,7 +120,7 @@ public class NetWorkActivity extends BaseActivity {
             try {
                 contributors = call.execute().body();
                 for (Contributor contributor : contributors) {
-                    Logger.d(contributor.login + " (" + contributor.contributions + ")");
+                    LogKit.d(contributor.login + " (" + contributor.contributions + ")");
                 }
             } catch (IOException e) {
                 e.printStackTrace();
