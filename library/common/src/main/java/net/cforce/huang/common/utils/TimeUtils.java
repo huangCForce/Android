@@ -1,12 +1,17 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.cforce.huang.android.utils.ConstUtils.*;
+import static net.cforce.huang.common.utils.ConstUtils.DAY;
+import static net.cforce.huang.common.utils.ConstUtils.HOUR;
+import static net.cforce.huang.common.utils.ConstUtils.MIN;
+import static net.cforce.huang.common.utils.ConstUtils.MSEC;
+import static net.cforce.huang.common.utils.ConstUtils.SEC;
 
+import static net.cforce.huang.common.utils.ConstUtils.TimeUnit;
 /**
  *
  * Created by huang on 2016/9/22.

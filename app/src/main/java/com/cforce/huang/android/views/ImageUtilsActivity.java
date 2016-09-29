@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cforce.huang.android.R;
-import com.cforce.huang.android.utils.ImageKit;
 
 import java.util.Random;
 

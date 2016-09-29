@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -26,9 +26,6 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -53,15 +50,6 @@ public class ImageUtils {
         throw new AssertionError();
     }
 
-    /**
-     * 加载图片 Glide
-     * @param context 上下文
-     * @param url       图片链接
-     * @param imageView 图片控件
-     */
-    public static void loadImg(Context context, String url, ImageView imageView){
-        Glide.with(context).load(url).into(imageView);
-    }
 
     /**
      * bitmap转byteArr
@@ -1040,7 +1028,7 @@ public class ImageUtils {
                 0x70FFFFFF, 0x00FFFFFF, Shader.TileMode.MIRROR);
         paint.setShader(shader);
         paint.setXfermode(new PorterDuffXfermode(
-                android.graphics.PorterDuff.Mode.DST_IN));
+                PorterDuff.Mode.DST_IN));
         canvas.save();
         canvas.drawRect(0, srcHeight, srcWidth,
                 ret.getHeight() + REFLECTION_GAP, paint);

@@ -1,9 +1,13 @@
-package com.cforce.huang.android;
+package net.cforce.huang.common;
+
+
+import net.cforce.huang.common.utils.RegexUtils;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.cforce.huang.android.utils.ConstUtils.REGEX_IP;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_IP;
+
 
 /**
  *

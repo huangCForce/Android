@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

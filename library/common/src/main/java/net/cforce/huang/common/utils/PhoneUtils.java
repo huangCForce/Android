@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import android.content.ContentResolver;
 import android.content.Context;

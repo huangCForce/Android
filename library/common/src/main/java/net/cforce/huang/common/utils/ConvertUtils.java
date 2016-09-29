@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -15,7 +15,11 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
-import static com.cforce.huang.android.utils.ConstUtils.*;
+import static net.cforce.huang.common.utils.ConstUtils.BYTE;
+import static net.cforce.huang.common.utils.ConstUtils.GB;
+import static net.cforce.huang.common.utils.ConstUtils.KB;
+import static net.cforce.huang.common.utils.ConstUtils.MB;
+
 
 /**
  *

@@ -1,8 +1,19 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import java.util.regex.Pattern;
 
-import static com.cforce.huang.android.utils.ConstUtils.*;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_CHZ;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_DATE;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_EMAIL;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_IDCARD15;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_IDCARD18;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_IP;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_MOBILE_EXACT;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_MOBILE_SIMPLE;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_TEL;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_URL;
+import static net.cforce.huang.common.utils.ConstUtils.REGEX_USERNAME;
+
 
 /**
  *

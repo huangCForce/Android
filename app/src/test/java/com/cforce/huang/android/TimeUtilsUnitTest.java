@@ -1,8 +1,5 @@
 package com.cforce.huang.android;
 
-import com.cforce.huang.android.utils.ConstUtils;
-import com.cforce.huang.android.utils.TimeUtils;
-
 import org.junit.Assert;
 import org.junit.Test;
 

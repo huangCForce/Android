@@ -1,4 +1,7 @@
-package com.cforce.huang.android;
+package net.cforce.huang.common;
+
+
+import net.cforce.huang.common.utils.EncryptUtils;
 
 import org.junit.Test;
 

@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.cforce.huang.android.R;
-import com.cforce.huang.android.utils.NetworkUtils;
 import com.orhanobut.logger.Logger;
 
 import java.io.IOException;

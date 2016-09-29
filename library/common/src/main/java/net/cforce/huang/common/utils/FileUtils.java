@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -19,7 +19,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.cforce.huang.android.utils.ConstUtils.KB;
+import static net.cforce.huang.common.utils.ConstUtils.KB;
+
 
 /**
  *

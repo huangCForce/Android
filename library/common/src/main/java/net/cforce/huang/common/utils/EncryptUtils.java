@@ -1,4 +1,4 @@
-package com.cforce.huang.android.utils;
+package net.cforce.huang.common.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,8 +12,9 @@ import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-import static com.cforce.huang.android.utils.ConvertUtils.bytes2HexString;
-import static com.cforce.huang.android.utils.ConvertUtils.hexString2Bytes;
+import static net.cforce.huang.common.utils.ConvertUtils.bytes2HexString;
+import static net.cforce.huang.common.utils.ConvertUtils.hexString2Bytes;
+
 
 /**
  *
@@ -76,6 +77,8 @@ public class EncryptUtils {
     public static String encryptMD5ToString(String data, String salt) {
         return bytes2HexString(encryptMD5((data + salt).getBytes()));
     }
+
+
 
     /**
      * MD5加密

@@ -1,6 +1,6 @@
-package com.cforce.huang.android;
+package net.cforce.huang.common;
 
-import com.cforce.huang.android.utils.StringUtils;
+import net.cforce.huang.common.utils.StringUtils;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.cforce.huang.android.R;
-import com.cforce.huang.android.utils.ScreenUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
