@@ -10,6 +10,9 @@ import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import in.srain.cube.views.ptr.PtrClassicFrameLayout;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
+import in.srain.cube.views.ptr.PtrFrameLayout;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,6 +25,8 @@ public class MainActivity extends BaseActivity {
     Button btnScreen;
     @BindView(R.id.btn_img)
     Button btnImg;
+    @BindView(R.id.ptr_view)
+    PtrClassicFrameLayout ptrFrame;
 
     @Override
     protected int getContentViewLayoutId() {
@@ -32,6 +37,23 @@ public class MainActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Logger.d("MainActivity");
+        ptrFrame.setLastUpdateTimeRelateObject(this);
+        ptrFrame.setPtrHandler(new PtrDefaultHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                frame.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ptrFrame.refreshComplete();
+                    }
+                }, 1500);
+            }
+
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                return true;
+            }
+        });
     }
 
     @OnClick({R.id.constrainlBtn, R.id.networkBtn, R.id.btn_screen, R.id.btn_img})
