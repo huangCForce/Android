@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.cforce.huang.android.R;
 
-import net.cforce.huang.common.utils.ImageKit;
+import net.cforce.huang.common.image.ImageKit;
 
 import java.util.Random;
 

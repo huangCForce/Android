@@ -1,4 +1,4 @@
-package net.cforce.huang.common.utils;
+package net.cforce.huang.common.image;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

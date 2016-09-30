@@ -9,6 +9,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 
+import net.cforce.huang.common.image.ImageUtils;
+
 import java.io.File;
 import java.io.IOException;
 

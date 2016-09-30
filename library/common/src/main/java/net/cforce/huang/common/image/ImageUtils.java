@@ -1,4 +1,4 @@
-package net.cforce.huang.common.utils;
+package net.cforce.huang.common.image;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -26,6 +26,10 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+
+import net.cforce.huang.common.utils.ConvertUtils;
+import net.cforce.huang.common.utils.FileUtils;
+import net.cforce.huang.common.utils.StringUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
